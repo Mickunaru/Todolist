@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+  background-color: #003256;
+  color: #007bff;
+  font-size: 1.2em;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1em;
+  font-size: 1em;
+  gap: 10px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+li, .home {
+  text-decoration: none;
+}
+
+i {
+  margin-right: 5px;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.home {
+  padding-left: 1em;
+  font-size: 1.25em;
+  font-weight: bolder;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+.nav-links {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: azure;
+}
+
+.nav-item {
+  position: relative;
+}
+
+main {
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+  background-color: #1e5d89;
+  border: 0.5em solid #234f6e;
+}
+
+label {
+  font-size: 1.2em;
+  padding-top: 1em;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 1em;
+  width: 50%;
+  align-self: center;
+}
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 12em);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  height: 100vh;
+  padding: 10px;
+  background-color: #1e5d89;
+}
+
+.note {
+  word-wrap: break-word;
+  min-width: 10em;
+  max-width: 100%;
+  background-color: #234f6e;
+  border: 0.5em solid #234f6e;
+  border-radius: 5px;
+}
+
+.note-title {
+  font-weight: bold;
+  color: white;
+}
+
+.note-description {
+  color: grey;
+  font-size: 12px;
+}

@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+  <form class="side-bar" action="/submit" method="POST">
+    <label for="title">Title</label>
+    <input type="text" name="title" />
+    <label for="description">Description</label>
+    <textarea id="text-box" name="description" rows="10"></textarea>
+    <input class="submit-btn" type="submit" value="add" />
+  </form>
+  <div class="notes-container">
+    <% if (locals.notes) { %> <% for (let note of locals.notes) { %>
+    <div class="note">
+      <p class="note-title"><%= note.title %></p>
+      <p class="note-description"><%= note.description %></p>
+    </div>
+    <% } %> <% } %>
+  </div>
+</main>
+
+<%- include("partials/footer.ejs") %>
